@@ -6,3 +6,7 @@ class Account():
         self.holder_name = holder_name
         self.balance = balance
         self.limit = limit
+
+
+    def deposit(self, importance):
+        self.balance += importance
