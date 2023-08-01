@@ -20,3 +20,9 @@ class Account():
 
     def increase_limit(self, importance):
         self.limit += importance
+        
+    def decrease_limit(self, importance):
+        self.limit -= importance
+    
+    def extract(self):
+        print(f'Account Number: {self.number}\nHolder Name: {self.holder_name}\nCurrent Balance: US$ {self.balance}\nCurrent Limit: US$ {self.limit}\n')
