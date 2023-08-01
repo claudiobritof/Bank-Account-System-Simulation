@@ -10,3 +10,10 @@ class Account():
     # Creating methods:
     def deposit(self, importance):
         self.balance += importance
+
+    def withdraw(self, importance):
+        new_balance = self.balance - importance
+        if new_balance < 0:
+            print(f'Balance of US$ {self.balance} is insufficient to withdraw US$ {importance}.')
+        else:
+            self.balance = new_balance
