@@ -17,3 +17,6 @@ class Account():
             print(f'Balance of US$ {self.balance} is insufficient to withdraw US$ {importance}.')
         else:
             self.balance = new_balance
+
+    def increase_limit(self, importance):
+        self.limit += importance
