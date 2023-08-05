@@ -26,3 +26,9 @@ class Account():
     
     def extract(self):
         print(f'Account Number: {self.number}\nHolder Name: {self.holder_name}\nCurrent Balance: US$ {self.balance}\nCurrent Limit: US$ {self.limit}\n')
+    
+# Creating a class "SavingsAccount" to make balance yield. All related to "account":        
+class SavingsAccount(account):
+    def __init__(self, number, holder_name, balance, limit, yield_rate=0.05):
+        super().__init__(number, holder_name, balance, limit)
+        self.yield_rate = yield_rate
