@@ -32,3 +32,6 @@ class SavingsAccount(account):
     def __init__(self, number, holder_name, balance, limit, yield_rate=0.05):
         super().__init__(number, holder_name, balance, limit)
         self.yield_rate = yield_rate
+        
+    def yielding(self):
+        self.balance += self.balance * self.yield_rate
