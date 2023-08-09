@@ -28,10 +28,19 @@ class Account():
         print(f'Account Number: {self.number}\nHolder Name: {self.holder_name}\nCurrent Balance: US$ {self.balance}\nCurrent Limit: US$ {self.limit}\n')
     
 # Creating a class "SavingsAccount" to make balance yield. All related to "account":        
-class SavingsAccount(account):
+class SavingsAccount(Account):
     def __init__(self, number, holder_name, balance, limit, yield_rate=0.05):
         super().__init__(number, holder_name, balance, limit)
         self.yield_rate = yield_rate
         
     def yielding(self):
         self.balance += self.balance * self.yield_rate
+
+# Creating a "SalaryAccount" class:
+class SalaryAccount(Account):
+    def __init__(self, number, holder_name, balance, limit, salary):
+        super().__init__(number, holder_name, balance, limit)
+        self.salary = salary
+
+    def earn(self):
+        self.deposit(self.salary)
