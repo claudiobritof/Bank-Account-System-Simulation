@@ -44,3 +44,6 @@ class SalaryAccount(Account):
 
     def earn(self):
         self.deposit(self.salary)
+    
+    def new_salary(self, new_salary):
+        self.salary = new_salary
