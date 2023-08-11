@@ -47,3 +47,6 @@ class SalaryAccount(Account):
     
     def new_salary(self, new_salary):
         self.salary = new_salary
+    
+# Creating a "CheckingAccount" class:
+class CheckingAccount(Account):
