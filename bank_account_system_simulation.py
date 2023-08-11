@@ -50,3 +50,8 @@ class SalaryAccount(Account):
     
 # Creating a "CheckingAccount" class:
 class CheckingAccount(Account):
+    def __init__(self, number, holder_name, balance, limit):
+        super().__init__(number, holder_name, balance, limit)
+        if limit < 0:
+            limit = 0
+        self.limit = limit 
